@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>slider</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #canvas {
+            background: gray;
+            width: 600px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inner-box {
+            background: orange;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".inner-box").each(function (index) {
+                $(this).css({
+                    left: index * 90,
+                    top: index * 90
+                });
+            })
+        });
+    </script>
+</head>
+<body>
+<h1>Test Header</h1>
+<div id="canvas">
+    <div class="inner-box"></div>
+    <div class="inner-box"></div>
+    <div class="inner-box"></div>
+    <div class="inner-box"></div>
+    <div class="inner-box"></div>
+</div>
+<h1>Test Header</h1>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Woojo</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/woojo.css">
+    <link rel="stylesheet" type="text/css" href="css/woojo_about.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".title-letter span").css("transform", "translate(0, 0)");
+            $(".line").css("transform", "translate(0, 0)");
+            $(".title-text div").each(function (index) {
+                var that = this;
+                setTimeout(function () {
+                    $(that).css({
+                        transform: "translate(0, 0)",
+                        opacity: 1
+                    });
+                }, 150 * index);
+            });
+            setTimeout(function () {
+                $(".myTitle").css({
+                    transform: "translate(0, 0)",
+                    opacity: 1
+                });
+            }, 150);
+
+            setTimeout(function () {
+                $(".myInfo").css({
+                    transform: "translate(0, 0)",
+                    opacity: 1
+                });
+            }, 300)
+
+            $(".menu-mobile").click(function () {
+                if ($("header").hasClass("open"))
+                    $("header").removeClass("open");
+                else
+                    $("header").addClass("open");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="header-wrapper">
+            <div class="logo" style="--textColor: #97aac7; --slideColor: #b0d0f1">
+                <a style="text-decoration: none; color:inherit" href="index.html">Woojo Kim</a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li style="--textColor: #d7b799; --slideColor: #d7b799">
+                        <a style="text-decoration: none; color:inherit" href="#">About</a>
+                    </li>
+                    <li style="--textColor: #a0d7cc; --slideColor: #a0d7cc">
+                        <a style="text-decoration: none; color:inherit" href="index_project.html">Projects</a>
+                    </li>
+                    <li style="--textColor: #b2bfd7; --slideColor: #b2bfd7">
+                        <a style="text-decoration: none; color:inherit" href="index_contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-mobile"></div>
+            <nav class="menu-mobile-content">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <div class="project-title">
+                    <div class="part">
+                        <div class="part">
+                            <div class="title-letter">
+                                        <span>
+                                            W
+                                        </span>
+                            </div>
+                            <div class="title-letter">
+                                        <span>
+                                            H
+                                        </span>
+                            </div>
+                            <div class="title-letter">
+                                        <span>
+                                            O
+                                        </span>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <div class="line-wrapper">
+                                        <span class="line">
+                                        </span>
+                            </div>
+                            <div class="title-letter">
+                                        <span>
+                                            I
+                                        </span>
+                            </div>
+                            <div class="title-letter">
+                                        <span>
+                                            S
+                                        </span>
+                            </div>
+                            <div class="title-letter">
+                                        <span>
+                                            ?
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="myTitle">
+                    <div class="myPhoto">
+                        <img src="img/me.jpg">
+                    </div>
+                    <div class="myName">
+                        Woojo Kim
+                    </div>
+                </div>
+                <table class="myInfo">
+                    <tr>
+                        <td class="myInfo-title">Major</td>
+                        <td class="myInfo-content">Computer Engineering(B.S.)</td>
+                    </tr>
+                    <tr>
+                        <td class="myInfo-title">Skill</td>
+                        <td class="myInfo-content">
+                            <p><strong>MS Office</strong>: Word, Excel, PowerPoint</p>
+                            <p><strong>Design</strong>: Photoshop</p>
+                            <p><strong>Language</strong>: Native in Korean & Conversational-level
+                                English</p>
+                            <p><strong>Develop Language</strong>: C, C++, Java, MySQL, HTML, PHP</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("ul li:first").hide();
+                //$("ul li:first-child").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+<h2>ul li:first vs li:first-child</h2>
+<p>List 1:</p>
+<ul>
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li>Tea</li>
+</ul>
+
+<p>List 2:</p>
+<ul>
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li>Tea</li>
+</ul>
+<button>Click me</button>
+</body>
+</html>

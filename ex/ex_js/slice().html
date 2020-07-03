@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>slice()</title>
+</head>
+<body>
+<h2>JavaScript Array Methods</h2>
+<p>slice() 메서드는 새 배열을 만듭니다. 원래 배열에서 요소를 제거하지 않습니다.</p>
+<p id="arraydemo"></p>
+<script>
+    var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    var citrus = fruits.slice(3);
+    document.getElementById("arraydemo").innerHTML = fruits + "<br><br>" + citrus;
+</script>
+</body>
+</html>

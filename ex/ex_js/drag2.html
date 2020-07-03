@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>drag events</title>
+    <style>
+        .droptarget {
+            float: left;
+            width: 200px;
+            height: 100px;
+            margin: 15px;
+            padding: 20px;
+            border: 3px solid #aaa;
+        }
+
+        #dragdemo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: yellowgreen;
+        }
+
+        #dragtarget {
+            width: 180px;
+            height: 55px;
+            border: 1px dotted #aaa;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<p id="dragdemo">Drag해보세요.</p>
+<div class="droptarget">
+    <p draggable="true" id="dragtarget">Drag me!</p>
+</div>
+<div class="droptarget"></div>
+<script>
+    document.addEventListener("dragstart", function(event) {
+        event.dataTransfer.setData("Text", event.target.id);
+        document.getElementById("dragdemo").innerHTML = "드래그 시작";
+        event.target.style.opacity = "0.3";
+    });
+
+    document.addEventListener("drag", function (event) {
+        document.getElementById("dragdemo").style.color = "orange";
+    });
+
+    document.addEventListener("dragend", function (event) {
+        document.getElementById("dragdemo").innerHTML = "Drag 성공";
+        event.target.style.opacity = "1";
+    });
+
+    document.addEventListener("dragenter", function (event) {
+        if (event.target.className == "droptarget")
+            event.target.style.border = "3px dotted red";
+    });
+
+    document.addEventListener("dragover", function (event) {
+        event.preventDefault();
+    });
+
+    document.addEventListener("dragleave", function (event) {
+        if (event.target.className == "droptarget")
+            event.target.style.border = "";
+    });
+
+    document.addEventListener("drop", function (event) {
+        event.preventDefault();
+        if (event.target.className == "droptarget") {
+            document.getElementById("dragdemo").style.color = "";
+            event.target.style.border = "";
+            var data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+        }
+    });
+</script>
+</body>
+</html>

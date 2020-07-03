@@ -1,0 +1,150 @@
+*, :after, :before {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0; padding: 0;
+}
+
+hr, img {
+	border: 0;
+}
+
+body {
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+header {
+	height: 102px;
+	background: #121623;
+}
+
+.h100 {
+	height: 100%;
+}
+
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 90px;
+}
+
+.nav-container-wrap {
+	display: flex;
+	width: calc(100% - 235px);
+}
+
+.nav-container-search {
+	display: flex;
+}
+
+.nav-container-icon {
+	display: flex;
+	align-items: center;
+	padding-left: 11px;
+}
+
+.nav-container-icon img {
+	height: 80px;
+}
+
+.nav-container-menu {
+	width: calc(100% - 123px);
+}
+
+.nav-container-ul {
+	list-style-type: none;
+	float: left;
+	width: 100%;
+}
+
+.nav-container-ul li {
+	position: relative;
+	float: left;
+	padding: 0 20px;
+	padding-right: 13px;
+	height: 100%;
+}
+
+.nav-container-ul a {
+	text-decoration: none;
+	color: #a8b2bc;
+	line-height: 102px;
+	padding-left: 10px;
+}
+
+.active a {
+	color: #ff7629;
+}
+
+.search-form {
+	padding: 0;
+	display: flex;
+	margin: 0;
+	width: 100%;
+}
+
+.search-logo {
+	position: absolute;
+	height: 22px;
+	top: calc(50% - 11px);
+	left: 10px;
+}
+
+.top-search {
+	display: flex;
+	align-self: center;
+	justify-content: space-between;
+	width: 286px;
+	height: 40px;
+	margin-top: -6px;
+	border: 1px solid #6a7175;
+	border-radius: 4px;
+	position: relative;
+	padding: 1px;
+	box-sizing: border-box;
+	margin-right: 4px;
+}
+
+.top-search-inp {
+	width: calc(100% - 34px);
+	height: 100%;
+	background: #1e222e;
+	border: none;
+	color: #686f7a;
+	box-sizing: border-box;
+	padding-left: 38px;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+#show-login-state {
+	position: absolute;
+	top: 80px;
+	right: 90px;
+	font: 10px/9px tahoma;
+	color: #CACACA;
+}
+
+#show-login-state a {
+	color: #CACACA;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+

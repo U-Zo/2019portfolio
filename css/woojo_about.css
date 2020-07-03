@@ -1,0 +1,164 @@
+.main-content {
+    height: auto;
+    padding-top: 26px;
+}
+
+header {
+    z-index: 100;
+}
+
+.part {
+    color: #dcbc9a;
+}
+
+.title-letter {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 0.9;
+    font-size: 9vw;
+}
+
+.title-letter span {
+    position: relative;
+    display: inline-block;
+    transform: translate(-100%, 0);
+    transition: transform 1s var(--ease);
+}
+
+.line-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 0.9;
+    font-size: 9vw;
+    margin-right: 0.5em;
+    margin-left: 0.08rem;
+}
+
+.line {
+    display: inline-block;
+    vertical-align: middle;
+    height: 0.085em;
+    width: .65em;
+    background-color: #dcbc9a;
+    transform: translate(-100%, 0);
+    transition: transform 1s var(--ease);
+}
+
+.myTitle {
+    opacity: 0;
+    transform: translate(0, 20%);
+    transition: transform 1s var(--ease), opacity 1s var(--ease);
+}
+
+.myPhoto {
+    padding-top: 50px;
+}
+
+.myPhoto img {
+    width: 15vw;
+    height: 20vw;
+}
+
+.myName {
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.myInfo {
+    padding: 0 13vw;
+    opacity: 0;
+    transform: translate(0, 20%);
+    transition: transform 1s var(--ease), opacity 1s var(--ease);
+}
+
+.myInfo-title {
+    position: relative;
+    width: 40%;
+    font-size: 2vw;
+}
+
+.myInfo-content {
+    padding-left: 10px;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 415px) {
+    .main-content {
+        height: auto;
+        padding-top: 26px;
+    }
+
+    .part {
+        color: #dcbc9a;
+    }
+
+    .title-letter {
+        display: inline-block;
+        overflow: hidden;
+        line-height: 0.9;
+        font-size: 18vw;
+    }
+
+    .title-letter span {
+        position: relative;
+        display: inline-block;
+        transform: translate(-100%, 0);
+        transition: transform 1s var(--ease);
+    }
+
+    .line-wrapper {
+        display: inline-block;
+        overflow: hidden;
+        line-height: 0.9;
+        font-size: 18vw;
+        margin-right: 0.5em;
+        margin-left: 0.08rem;
+    }
+
+    .line {
+        display: inline-block;
+        vertical-align: middle;
+        height: 0.085em;
+        width: .65em;
+        background-color: #dcbc9a;
+        transform: translate(-100%, 0);
+        transition: transform 1s var(--ease);
+    }
+
+    .myTitle {
+        opacity: 0;
+        transform: translate(0, 20%);
+        transition: transform 1s var(--ease), opacity 1s var(--ease);
+    }
+
+    .myPhoto {
+        padding-top: 50px;
+    }
+
+    .myName {
+        font-size: 16px;
+    }
+
+    .myInfo {
+        opacity: 0;
+        transform: translate(0, 20%);
+        transition: transform 1s var(--ease), opacity 1s var(--ease);
+        padding: 0;
+    }
+
+    .myPhoto img {
+        width: 131px;
+        height: 175px;
+    }
+
+    .myInfo-title {
+        position: relative;
+        font-size: 15px;
+        width: 0;
+    }
+
+    .myInfo-content {
+        padding-left: 10px;
+        font-size: 13px;
+    }
+}

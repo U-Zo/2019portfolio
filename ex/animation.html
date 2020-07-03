@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>Animation Practice</title>
+		<style>
+			body {
+				margin: 0; padding: 0;
+			}
+			
+			.loading {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: #c5caf7;
+				transition: transform 1s cubic-bezier(0.085, 0.760, 0.410, 0.845); 1s;
+			}
+			
+			.loading1 {
+				position: absolute;
+				transform: translate3d(0, -100%, 0);
+				width: 100%;
+				height: 100%;
+				background: #c5caf7;
+				transition: transform 1s cubic-bezier(0.085, 0.760, 0.410, 0.845); 1s;
+			}
+			
+			div h1{
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				line-height: 100%;
+			}
+		</style>
+		<script>
+			function updateTransition() {
+				var el = document.querySelector("div.loading");
+				
+				if (el) {
+					el.className = "loading1";
+				}
+				
+				return el;
+			}
+			
+			var intervalID = window.setInterval(updateTransition, 1000);
+		</script>
+	</head>
+	<body>
+		<header>
+		</header>
+		<div class="loading">
+			<h1 style="margin: 0 auto;">asdasdsad</h1>
+		</div>
+	</body>
+</html>

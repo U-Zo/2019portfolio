@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#all-check').change(function () {
+                if (this.checked)
+                    $('#check-item').children().prop('checked', true);
+                else
+                    $('#check-item').children().prop('checked', false);
+            });
+            
+            $('input').change(function () {
+                if (!this.checked)
+                    $('#all-check').prop('checked', false);
+            })
+        });
+    </script>
+</head>
+<body>
+<h2>체크박스 한 번에 선택하기</h2>
+<div id="check-item">
+    <input type="checkbox">
+    <label>개인 정보 취급 방침에 동의합니다.</label><br><br>
+    <input type="checkbox">
+    <label>정보 통신망 이용 촉진 및 정보 보호 등에 관한 법률에 동의합니다.</label><br><br>
+    <input type="checkbox">
+    <label>위치 정보 활용에 동의합니다.</label><br><br>
+    <input type="checkbox" id="all-check">
+    <label>모두 선택합니다.</label>
+</div>
+</body>
+</html>

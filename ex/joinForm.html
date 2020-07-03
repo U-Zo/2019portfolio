@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>회원가입</title>
+	</head>
+	<style>		
+		#container{
+			border-radius: 5px;
+			background: rgba(3,3,3,0.7);
+			box-shadow: 1px 1px 50px #000;
+			left: 0;
+			right: 0;
+		}
+		
+		td {
+			border:1px solid #000000;
+			padding: 1px;
+		}
+	</style>
+	<body style="width:1000px; margin-left: 15%;">
+		<div style="width:70%; font-size:30px;">
+				회원가입 | <span style="color:red">M</span>ember <span style="color:red">P</span>rivate Informaion
+		</div>
+		<br>
+		<br>
+		<div>
+			<form method="post" action="" style="margin:0 auto">
+				<span style="width:50%; float:left;">기본정보 입력</span>
+				<span style="width:50%; float:right;"><img src="img/checked.png">표시는 필수항목이므로 반드시 입력해야 합니다.</span>
+				<br>
+				<table style="border:solid black 1px; border-collapse: collapse; width:1000px; border-radius: 1em;">
+					<tr>
+						<td style="width:20%"><img src="img/checked.png">아이디</td>
+						<td style="width:80%">
+							<input type="text" name="username">
+							<input type="button" name="checkuser" value="중복검색">
+							영문
+						</td>
+					</tr>
+					<tr>
+						<td><img src="img/checked.png">비밀번호</td>
+						<td><input type="password" name="pass">
+							->재확인
+							<input type="password" name="pass">
+						</td>
+					</tr>
+					<tr>
+						<td><img src="img/checked.png">비밀번호 힌트</td>
+						<td><input type="text" name="hint">비번분실-조회시 참고할 내용</td>
+					</tr>
+					<tr>
+						<td><img src="img/checked.png">이름(본명)</td>
+						<td><input type="text" name="name">->한글</td>
+					</tr>
+					<tr>
+						<td><img src="img/checked.png">닉네임(별명)</td>
+						<td>
+							<input type="text" name="nick">
+							<input type="button" name="checknick" value="중복검색">
+						</td>
+					</tr>
+					<tr>
+						<td><img src="img/checked.png">전자메일주소</td>
+						<td>
+							<input type="email" name="email" size="30px">
+							<span style="float:right; margin-right:10%;"><input type="checkbox" name="emailok">비공개</span>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="img/checked.png">생년월일</td>
+						<td>
+							<input type="date" name="birth">
+							<input id="moon" type="radio" name="SNM" value="moon">음
+							<input id="sun" type="radio" name="SNM" value="sun">양
+							<span style="float:right; margin-right:10%;"><input type="checkbox" name="emailok">비공개</span>
+						</td>
+					</tr>
+					<tr>
+						<td><img src="img/checked.png">성별</td>
+						<td>
+							<input id="man" type="radio" name="gender" value="남자">남
+							<input id="woman" type="radio" name="gender" value="여자">여
+							<span style="float:right; margin-right:10%;"><input type="checkbox" name="emailok">비공개</span>
+						</td>
+					</tr>
+					<tr>
+						<td>우편번호</td>
+						<td>
+							<input type="text" name="firstnum" size="5px">
+							-
+							<input type="text" name="lastnum" size="5px">
+							<input type="button" name="findnum" value="찾아보기">
+						</td>
+					</tr>
+					<tr>
+						<td>주소</td>
+						<td>
+							<input type="text" name="username"><br>
+							<input type="text" name="username"><-나머지주소
+							<span style="float:right; margin-right:10%;"><input type="checkbox" name="emailok">비공개</span>
+						</td>
+					</tr>					
+					<tr>
+						<td>일반전화 번호</td>
+						<td>
+							<select name="cellphone">
+								<option value="02">02</option>
+							</select>
+							<input size="5px" type="text" name="username">-
+							<input size="5px" type="text" name="username">
+							<span style="float:right; margin-right:10%;"><input type="checkbox" name="emailok">비공개</span>
+						</td>
+					</tr>
+					<tr>
+						<td>휴대전화 번호</td>
+						<td>
+							<select name="cellphone">
+									<option value="010">010</option>
+							</select>
+							<input size="5px" type="text" name="username">-
+							<input size="5px" type="text" name="username">
+							<span style="float:right; margin-right:10%;"><input type="checkbox" name="emailok">비공개</span>
+						</td>
+					</tr>
+					<tr>
+						<td>홈페이지</td>
+						<td>
+							<input size="40" type="text" name="username" value="http://">
+							<span style="float:right; margin-right:10%;"><input type="checkbox" name="emailok">비공개</span>
+						</td>
+						
+					</tr>
+					<tr>
+						<td>소개, 인삿말</td>
+						<td><textarea rows="5" cols="60">반갑습니다.</textarea></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<br>
+				
+		<div>
+			추가정보 입력<br>
+			<form>
+				<table style="border:1px solid #000000; border-collapse:collapse; width:1000px;">
+					<tr>
+						<td style="width:20%">사진첨부</td>
+						<td style="width:80%">
+							<input type="file" accept="image/jpg, image/gif">
+							<p style="margin:1px; font-size:10px">200 x 200 픽셀 이하 크기만 허용</p>
+						</td>
+					</tr>
+					<tr>
+						<td>이름표시 아이콘</td>
+						<td>
+							<input type="file" accept="image/jpg, image/gif">
+							<p style="margin:1px; font-size:10px">25 x 20 픽셀 이하 크기만 허용</p>
+						</td>
+					</tr>
+					<tr>
+						<td>혼인여부</td>
+						<td>
+							<input id="moon" type="radio" name="SNM" value="moon">미혼
+							<input id="sun" type="radio" name="SNM" value="sun">기혼
+							<input id="moon" type="radio" name="SNM" value="moon">이혼
+							<input id="sun" type="radio" name="SNM" value="sun">교제중
+						</td>
+					</tr>
+					<tr>
+						<td>관심분야</td>
+						<td>
+							<select name="cellphone">
+									<option value="010">선택없음</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>캐릭터 선택</td>
+						<td>
+							<input type="file" accept="image/jpg, image/gif">
+						</td>
+					</tr>
+					<tr>
+						<td>메일링 수신 거부</td>
+						<td><input type="checkbox">메일링 수신 거부 시 체크.</td>
+					</tr>
+					<tr>
+						<td>쪽지 수신 거부</td>
+						<td><input type="checkbox">쪽지 수신 거부 시 체크.</td>
+					</tr>
+					<tr>
+						<td>전체 비공개</td>
+						<td><input type="checkbox">회원등록정보 전체 비공개 시 체크.</td>
+					</tr>
+				</table>
+				<input size="100px" type="submit" value="입력완료전송">
+				<input type="reset" value="다시입력하기">
+			</form>
+		</div>
+	</body>
+</html>

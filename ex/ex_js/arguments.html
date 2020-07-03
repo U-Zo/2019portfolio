@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>return arguments.length</title>
+</head>
+<body>
+<h2>JavaScript Functions</h2>
+<p>arguments.length 속성은 함수가 받는 인수의 수를 반환합니다.</p>
+<p id="demo"></p>
+<script>
+    function myFunction(a, b, c, d, e) {
+        var s = "";
+
+        for (var i = 0; i < arguments.length; i++) {
+            s += arguments[i] + " ";
+        }
+
+        return s;
+    }
+    document.getElementById("demo").innerHTML = myFunction(10, 20, 30, 40, 50);
+</script>
+</body>
+</html>

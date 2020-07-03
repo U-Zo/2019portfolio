@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project-MQTT</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/woojo.css">
+    <link rel="stylesheet" type="text/css" href="css/woojo_projects.css">
+    <style>
+        .jav-chat {
+            width: 500px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".title-letter span").each(function (index) {
+                var that = this;
+                setTimeout(function () {
+                    $(that).css({
+                        transform: "translate(0, 0)"
+                    });
+                }, 25 * index)
+            });
+            //$(".title-letter span").css("transform", "translate(0, 0)");
+            setTimeout(function () {
+                $(".line").css("transform", "translate(0, 0)");
+            }, 300);
+
+            setTimeout(function () {
+                $(".projects-modal-content").css("opacity", 1);
+            }, 600);
+
+            $(".menu-mobile").click(function () {
+                if ($("header").hasClass("open"))
+                    $("header").removeClass("open");
+                else
+                    $("header").addClass("open");
+            });
+
+            $(window).resize(function () {
+                if ($(document).width() < 415)
+                    $(".jav-chat").css({
+                        width: "auto"
+                    });
+                else {
+                    $(".jav-chat").css({
+                        width: "50%"
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="header-wrapper">
+            <div class="logo" style="--textColor: #97aac7; --slideColor: #b0d0f1">
+                <a style="text-decoration: none; color:inherit" href="index.html">Woojo Kim</a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li style="--textColor: #a0d7cc; --slideColor: #a0d7cc">
+                        <a style="text-decoration: none; color:inherit" href="index_project.html">Projects</a>
+                    </li>
+                    <li style="--textColor: #d7b799; --slideColor: #d7b799">
+                        <a style="text-decoration: none; color:inherit" href="index_about.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-mobile"></div>
+            <nav class="menu-mobile-content">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main-wrapper">
+            <div id="project">
+                <div class="project-title">
+                    <div class="part">
+                        <div class="title-letter">
+                            <span>
+                                J
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                A
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                V
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                A
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                &nbsp;
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                C
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                H
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                A
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                T
+                            </span>
+                        </div>
+                    </div>
+                    <div class="part">
+                        <div class="line-wrapper">
+                            <span class="line"></span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                A
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                P
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                P
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                L
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                I
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                C
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                A
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                T
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                I
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                O
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                N
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-modal-content">
+                    <div class="projects-modal-content-img">
+                        <img src="img/pj/java_chat/chat.jpg">
+                    </div>
+                    <table class="projects-modal-content-table">
+                        <tr>
+                            <td class="projects-modal-content-title">Purpose</td>
+                            <td class="projects-modal-content-content">
+                                <div>
+                                    ● Improve ability about Java socket programming
+                                </div>
+                                <div>
+                                    ● Improve utilization by storing logs in the database
+                                </div>
+                                <div>
+                                    ● Develop UI with JFrame
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="projects-modal-content-title">Environment</td>
+                            <td class="projects-modal-content-content">
+                                <div>
+                                    ● Windows 10
+                                </div>
+                                <div>
+                                    ● Eclipse
+                                </div>
+                                <div>
+                                    ● Oracle DB
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="projects-modal-content-title">Development</td>
+                            <td class="projects-modal-content-content">
+                                <div>
+                                    <p>● Frame</p>
+                                    <p>- Using JFrame</p>
+                                    <p>- To improve user accessibility</p>
+                                </div>
+                                <div>
+                                    <p>● Database</p>
+                                    <p>- Save user information and chat logs</p>
+                                    <p>- Perform SQL query</p>
+                                </div>
+                                <div>
+                                    <p>● Chat</p>
+                                    <p>- Messages between users sent and received using packets</p>
+                                    <p>- Attaching the user's ID to the message to identify the user</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="projects-modal-content-img">
+                        <img class="jav-chat" style="width: 50%;" src="img/pj/java_chat/login.jpg">
+                        <p>● Login user interface</p>
+                    </div>
+                </div>
+                <div class="project-list-wrapper">
+                    <p class="project-p" style="font-size: 50px; color: #666;">PROJECTS</p>
+                    <div class="projects-list">
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <img src="img/pj/jsp/join.jpg">
+                                <a href="jsp_addrbook.html">
+                                    <div class="projects-list-cover">
+                                        <p>JSP Address</p>
+                                        <p>Book System</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <img src="img/pj/cap/iot.jpg">
+                                <a href="mqtt.html">
+                                    <div class="projects-list-cover">
+                                        <p>Based on MQTT</p>
+                                        <p>IoT Home System</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <img src="img/pj/database/erd.png">
+                                <a href="database.html">
+                                    <div class="projects-list-cover">
+                                        <p>Management System</p>
+                                        <p>For Music Streaming</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects-list">
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <img src="img/pj/mobile/mobile.jpg">
+                                <a href="mobile.html">
+                                    <div class="projects-list-cover">
+                                        <p>Total Utility</p>
+                                        <p>Application</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <img src="img/pj/wpos/login.jpg">
+                                <a href="wpos.html">
+                                    <div class="projects-list-cover">
+                                        <p>WPoS</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <div class="projects-list-cover"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

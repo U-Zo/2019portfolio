@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Woojo</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/woojo.css">
+    <link rel="stylesheet" type="text/css" href="css/woojo_projects.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".title-letter span").css("transform", "translate(0, 0)");
+            $(".line").css("transform", "translate(0, 0)");
+            $(".title-text div").each(function (index) {
+                var that = this;
+                setTimeout(function () {
+                    $(that).css({
+                        transform: "translate(0, 0)",
+                        opacity: 1
+                    });
+                }, 150 * index);
+            });
+            $(".projects-el-wrapper").each(function (index) {
+                var that = index;
+                setTimeout(function () {
+                    $(".projects-el-wrapper").eq(that).css({
+                        transform: "translate(0, 0)",
+                        opacity: 1
+                    });
+                }, that * 150);
+            });
+
+            $(".projects-el-wrapper").each(function (index) {
+                var that = index;
+                $(this).click(function () {
+                    $(".projects-modal").eq(that).css({
+                        display: "block",
+                        transform: "scaleX(1)",
+                        "pointer-events": "all"
+                    });
+
+                    setTimeout(function () {
+                        $(".projects-modal-wrapper").eq(that).css("opacity", 1);
+                        $(".projects-el-wrapper").css("opacity", 0);
+                        $(".project-title").css("opacity", 0);
+                    }, 300);
+                });
+            });
+
+            $(".projects-modal-header-close").click(function () {
+                $(".projects-modal-wrapper").css("opacity", "");
+
+                setTimeout(function () {
+                    $(".projects-modal").css({
+                        display: "",
+                        transform: "",
+                        "pointer-events": ""
+                    });
+                }, 500);
+
+                setTimeout(function () {
+                    $(".projects-el-wrapper").css("opacity", 1);
+                    $(".project-title").css("opacity", 1);
+                }, 800);
+            });
+
+            $(".menu-mobile").click(function () {
+                if ($("header").hasClass("open"))
+                    $("header").removeClass("open");
+                else
+                    $("header").addClass("open");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="header-wrapper">
+            <div class="logo" style="--textColor: #97aac7; --slideColor: #b0d0f1">
+                <a style="text-decoration: none; color:inherit" href="index.html">Woojo Kim</a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li style="--textColor: #d7b799; --slideColor: #d7b799">
+                        <a style="text-decoration: none; color:inherit" href="index_about.html">About</a>
+                    </li>
+                    <li style="--textColor: #a0d7cc; --slideColor: #a0d7cc">
+                        <a style="text-decoration: none; color:inherit" href="#">Projects</a>
+                    </li>
+                    <li style="--textColor: #b2bfd7; --slideColor: #b2bfd7">
+                        <a style="text-decoration: none; color:inherit" href="index_contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-mobile"></div>
+            <nav class="menu-mobile-content">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <div class="project-title">
+                    <div class="part">
+                        <div class="title-letter">
+                            <span>
+                                P
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                R
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                O
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                J
+                            </span>
+                        </div>
+                    </div>
+                    <div class="part">
+                        <div class="line-wrapper">
+                            <span class="line"></span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                E
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                C
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                T
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                S
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="projects-el-wrapper">
+                        <div class="projects-el-photo">
+                            <img src="img/pj/cap/iot.jpg">
+                        </div>
+                        <div class="projects-el-title">
+                            Based on MQTT IoT Home System
+                        </div>
+                    </div>
+                    <div class="projects-el-wrapper">
+                        <div class="projects-el-photo">
+                            <img src="img/pj/database/class_d.jpg">
+                        </div>
+                        <div class="projects-el-title">
+                            <p>Management system</p>
+                            <p>for music streaming</p>
+                        </div>
+                    </div>
+                    <div class="projects-el-wrapper">
+                        <div class="projects-el-photo">
+                            <img src="img/multi-process.jpg">
+                        </div>
+                        <div class="projects-el-title">
+                            Multi-process chat systems
+                        </div>
+                    </div>
+                    <div class="projects-el-wrapper">
+                        <div class="projects-el-photo">
+                            <img src="img/java.jpg">
+                        </div>
+                        <div class="projects-el-title">
+                            <p>Using socket programming</p>
+                            <p>Java chat application</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="projects-el-wrapper">
+                        <div class="projects-el-photo">
+                            <img src="img/pj/cap/iot.jpg">
+                        </div>
+                        <div class="projects-el-title">
+                            Based on MQTT IoT Home System
+                        </div>
+                    </div>
+                    <div class="projects-el-wrapper">
+                        <div class="projects-el-photo">
+                            <img src="img/pj/cap/iot.jpg">
+                        </div>
+                        <div class="projects-el-title">
+                            Based on MQTT IoT Home System
+                        </div>
+                    </div>
+                    <div class="projects-el-wrapper">
+                        <div class="projects-el-photo">
+                            <img src="img/pj/cap/iot.jpg">
+                        </div>
+                        <div class="projects-el-title">
+                            Based on MQTT IoT Home System
+                        </div>
+                    </div>
+                    <div class="projects-el-wrapper">
+                        <div class="projects-el-photo">
+                            <img src="img/pj/cap/iot.jpg">
+                        </div>
+                        <div class="projects-el-title">
+                            Based on MQTT IoT Home System
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-modal">
+                    <div class="projects-modal-wrapper">
+                        <div class="projects-modal-header">
+                            <div>
+                                <p>Based on MQTT</p>
+                                <p>IoT Home System</p>
+                            </div>
+                            <div class="projects-modal-header-close">x</div>
+                        </div>
+                        <div class="projects-modal-content">
+                            <table class="projects-modal-content-table">
+                                <tr>
+                                    <td class="projects-modal-content-title">Purpose</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            ● Reduced power consumption
+                                        </div>
+                                        <div>
+                                            ● Reduced data usage
+                                        </div>
+                                        <div>
+                                            ● Extend data integrity
+                                        </div>
+                                        <div>
+                                            ● Entry into IoT market active
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Environment</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            ● Windows 10
+                                        </div>
+                                        <div>
+                                            ● Raspbian
+                                        </div>
+                                        <div>
+                                            ● Arduino
+                                        </div>
+                                        <div>
+                                            ● Android Studio
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Development</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            <p>● Raspberry Pi</p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;- Using as broker server</p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;- Collect and distribute information from
+                                                each sensors</p>
+                                        </div>
+                                        <div>
+                                            <p>● Arduino</p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;- Control the behavior of each device</p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;- Download weather station
+                                                information</p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;- Perform automation system based on
+                                                weather station information</p>
+                                        </div>
+                                        <div>
+                                            <p>● Android & Web</p>
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;- Using as controller</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">System configuration</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/cap_system1.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Class diagram</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/cap_class.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Demo</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/iot.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-modal">
+                    <div class="projects-modal-wrapper">
+                        <div class="projects-modal-header">
+                            <div>
+                                <p>Management</p>
+                                <p>system</p>
+                                <p>for music streaming</p>
+                            </div>
+                            <div class="projects-modal-header-close">x</div>
+                        </div>
+                        <div class="projects-modal-content">
+                            <table class="projects-modal-content-table">
+                                <tr>
+                                    <td class="projects-modal-content-title">Purpose</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            ● Efficient music, revenue, and user management
+                                        </div>
+                                        <div>
+                                            ● Convenience provided through the provision of a lookup function
+                                        </div>
+                                        <div>
+                                            ● Efficient user information management
+                                        </div>
+                                        <div>
+                                            ● Manage expenses and revenues efficiently
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Environment</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            ● Windows 10
+                                        </div>
+                                        <div>
+                                            ● MySQL
+                                        </div>
+                                        <div>
+                                            ● Access
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Development</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            <p>● User and administrator query, registration</p>
+                                        </div>
+                                        <div>
+                                            <p>● Check and register various music information</p>
+                                        </div>
+                                        <div>
+                                            <p>● Check out expenses and revenues</p>
+                                        </div>
+                                        <div>
+                                            <p>● Inquiry of enquiries</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">System configuration</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/cap_system1.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Class diagram</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/cap_class.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Demo</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/iot.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-modal">
+                    <div class="projects-modal-wrapper">
+                        <div class="projects-modal-header">
+                            <div>
+                                <p>Management system</p>
+                                <p>for music streaming site</p>
+                            </div>
+                            <div class="projects-modal-header-close">x</div>
+                        </div>
+                        <div class="projects-modal-content">
+                            <table class="projects-modal-content-table">
+                                <tr>
+                                    <td class="projects-modal-content-title">Purpose</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            ● Efficient music, revenue, and user management
+                                        </div>
+                                        <div>
+                                            ● Convenience provided through the provision of a lookup function
+                                        </div>
+                                        <div>
+                                            ● Efficient user information management
+                                        </div>
+                                        <div>
+                                            ● Manage expenses and revenues efficiently
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Environment</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            ● Windows 10
+                                        </div>
+                                        <div>
+                                            ● MySQL
+                                        </div>
+                                        <div>
+                                            ● Access
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Development</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            <p>● User and administrator query, registration</p>
+                                        </div>
+                                        <div>
+                                            <p>● Check and register various music information</p>
+                                        </div>
+                                        <div>
+                                            <p>● Check out expenses and revenues</p>
+                                        </div>
+                                        <div>
+                                            <p>● Inquiry of enquiries</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">System configuration</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/cap_system1.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Class diagram</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/cap_class.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Demo</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/iot.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-modal">
+                    <div class="projects-modal-wrapper">
+                        <div class="projects-modal-header">
+                            <div>
+                                <p>Management system</p>
+                                <p>for music streaming site</p>
+                            </div>
+                            <div class="projects-modal-header-close">x</div>
+                        </div>
+                        <div class="projects-modal-content">
+                            <table class="projects-modal-content-table">
+                                <tr>
+                                    <td class="projects-modal-content-title">Purpose</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            ● Efficient music, revenue, and user management
+                                        </div>
+                                        <div>
+                                            ● Convenience provided through the provision of a lookup function
+                                        </div>
+                                        <div>
+                                            ● Efficient user information management
+                                        </div>
+                                        <div>
+                                            ● Manage expenses and revenues efficiently
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Environment</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            ● Windows 10
+                                        </div>
+                                        <div>
+                                            ● MySQL
+                                        </div>
+                                        <div>
+                                            ● Access
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Development</td>
+                                    <td class="projects-modal-content-content">
+                                        <div>
+                                            <p>● User and administrator query, registration</p>
+                                        </div>
+                                        <div>
+                                            <p>● Check and register various music information</p>
+                                        </div>
+                                        <div>
+                                            <p>● Check out expenses and revenues</p>
+                                        </div>
+                                        <div>
+                                            <p>● Inquiry of enquiries</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">System configuration</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/cap_system1.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Class diagram</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/cap_class.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="projects-modal-content-title">Demo</td>
+                                    <td class="projects-modal-content-content">
+                                        <div class="projects-modal-content-img">
+                                            <img src="img/pj/cap/iot.jpg">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

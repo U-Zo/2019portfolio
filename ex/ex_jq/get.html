@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-get</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function () {
+                alert("Text: " + $("#test").text());
+            });
+            $("#btn2").click(function () {
+                alert("HTML: " + $("#test").html());
+            });
+            $("#btn3").click(function () {
+                alert("input-value: " + $("#test2").val());
+            });
+            $("#btn4").click(function () {
+                alert("Attribute value: " + $("#naver").attr("href"));
+            });
+        })
+    </script>
+</head>
+<body>
+<h2>DOM을 읽기만 하면 get이라고 합니다.</h2>
+<button id="btn1">text()로 보기</button>
+<button id="btn2">html()로 보기</button>
+<button id="btn3">val()로 보기</button>
+<button id="btn4">attr()로 a태그의 href 속성 보기</button>
+<hr>
+<p id="test"><b>text()</b>는 text만 <strong>html()</strong>은 html 태그까지 다 보여줍니다.</p>
+<p>Name: <input type="text" id="test2" value="강감찬"></p>
+<p><a href="http://www.naver.com/" id="naver" target="_blank">네이버</a></p>
+<hr>
+</body>
+</html>

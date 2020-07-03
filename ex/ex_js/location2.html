@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>location 객체</title>
+</head>
+<body>
+<h2>location Method</h2>
+<script>
+    function replace() {
+        location.replace("http://sports.news.naver.com/");
+    }
+
+    function assign() {
+        location.assign("http://land.naver.com/");
+    }
+
+    function reload() {
+        location.reload();
+        var x = Math.random();
+        document.getElementById("reload").innerHTML = x;
+    }
+</script>
+<button href="#" onclick="assign()">assign으로 이동하기</button>
+<button href="#" onclick="replace()">replace로 이동하기</button>
+<p>assign후에 뒤로가기하면 history 목록을 알 수 있음.</p>
+<p>replace는 페이지가 교체 되어 알 수 없음.</p>
+<hr>
+<button href="#" onclick="reload()">새로고침</button>
+<p id="reload"></p>
+</body>
+</html>

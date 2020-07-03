@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+		<title>Layout Practice Mobile</title>
+		<style>
+			@keyframes on-screen {
+				from {
+					opacity: 0;
+				}
+				
+				to {
+					opacity: 1;
+				}
+			}
+			
+			body {
+				background: url("img/backimg.jpg") no-repeat center center;
+				background-size: cover;
+				overflow: hidden;
+				margin: 0;
+				padding: 0;
+			}
+		
+			header {
+				position: relative;
+				height: 120px;
+				width: 100%;
+				text-align: center;
+				background: rgba(3, 3, 3, 0.8);
+				color: #fff;
+				text-shadow: 3px 3px 10px #000;
+				animation: on-screen 1.5s 0s normal cubic-bezier(0.195, 0.455, 0.790, 0.405) none;
+			}
+			
+			#title {
+				margin: 0;
+				font-size: 1.3em;
+				line-height: 80px;
+			}
+			
+			nav {
+				text-align: center;
+				position: relative;
+				height: 40px;
+				background: rgba(0, 0, 0, 0.5);
+				color: #fff;
+				bottom : 0;
+				right: 0;
+				left: 0;
+			}
+			
+			nav ul {
+				display: table;
+				margin: 0; padding: 0;
+				list-style: none;
+				text-align: center;
+				color: #fff;
+				width: 100%;
+				height: 100%;
+			}
+			
+			nav ul li {
+				display: table-cell;
+				vertical-align: middle;
+				width: 100px;
+				text-transform: uppercase;
+				padding: 0 3px;
+			}
+			
+			ul li a {
+				line-height: 40px;
+				text-decoration: none;
+				color: white;
+				font-size: 0.5em;
+				transition: font-size 0.5s;
+			}
+			
+			ul li a:visited {
+				color: white;
+			}
+			
+			ul li a:hover {
+				font-size: 0.7em;
+				text-shadow: 1px 1px 5px #fff;
+			}
+			
+			section {
+				margin: auto;
+				position: relative;
+				height: 400px;
+				width: 80%;
+				animation: on-screen 1.5s 0s normal cubic-bezier(0.195, 0.455, 0.790, 0.405) none;
+			}
+			
+			article {
+				position: relative;
+				top: 50px;
+				height: 300px;
+				width: 100%;
+				border-radius: 5px;
+				background: rgba(3, 3, 3, 0.6);
+				box-shadow: 1px 1px 4px #000;
+			}
+			
+			#login {
+				position: relative;
+				width: 80%;
+				height: 20%;
+				margin: auto;
+				display: table;
+				text-align: center;
+				border-bottom: 1px solid #999;
+			}
+			
+			#board {
+				height: 80%;
+			}
+			
+			#login form {
+				display: table;
+				width: 100%;
+				padding-bottom: 5px;
+			}
+			
+			.info {
+				color: white;
+				text-shadow: 3px 3px 10px #000;
+				margin: 5px 0; padding: 0;
+			}
+			
+			input {
+				position: relative;
+				display: table-cell;
+				text-align: center;
+				height: 25px;
+				width: 20%;
+				background: rgba(0, 0, 0, 0.7);
+				border: none;
+				border-radius: 6px;
+				color: white;
+				margin: 0 5px;
+			}
+			
+			.join {
+				display: table-cell;
+				width: 20%;
+				color: white;
+				background: black;
+				border-radius: 6px;
+				text-decoration: none;
+			}
+			
+			.board {
+				position: relative;
+				width: 80%;
+				margin: 0 auto;
+			}
+			
+			.board p {
+				color: white;
+				font-size: 0.7em;
+				margin: 3px 0;
+				text-shadow: 1px 1px 10px #000;
+			}
+			
+			footer {
+				display: table;
+				position: relative;
+				clear: both;
+				height: 60px;
+				width: 100%;
+				line-height: 60px;
+				bottom: 0;
+				background: black;
+				color: #fff;
+				text-align: center;
+				animation: on-screen 1.5s 0s normal cubic-bezier(0.195, 0.455, 0.790, 0.405) none;
+			}
+			
+			footer p {
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
+				font-size: 0.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1 id="title">Woojo Kim's Mobile Web</h1>
+			<nav>
+				<ul>
+					<li><a href="#">home</a></li>
+					<li><a href="#">about me</a></li>
+					<li><a href="#">portfolio</a></li>
+					<li><a href="#">notice</a></li>
+					<li><a href="#">free board</a></li>
+					<li><a href="#">support</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<article>
+				<div id="login">
+					<p class="info">Information</p>
+					<form>
+						<input type="text" placeholder="ID">
+						<input type="password" placeholder="PASS">
+						<input class="submit" type="submit" value="Login">
+						<a class="join" href="#">Join</a>
+					</form>
+				</div>
+				<div id="board">
+					<div class="board">
+						<p class="start_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p>Hello, guys. My name is Woojo Kim.</p>
+						<p>I'm senior at Korea Polytechnic University.</p>
+						<p>I'm optimistic person. I like this working!</p>
+						<p>Background image is my photo in kpu.</p>
+					</div>
+				</div>
+			</article>
+		</section>
+		<footer>
+			<p>2018. 07. 31 / Layout Practice - Header, Nav, Section, Article, Aside, Footer</p>
+		</footer>
+	</body>
+</html>

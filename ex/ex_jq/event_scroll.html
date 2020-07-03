@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h2>무한 스크롤</h2>
+<div class="basic" style="background: lightgray; padding: 10px;"></div>
+<div class="infinity" style="background: lightblue; padding: 10px;"></div>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            var documentHeight = $(document).height();
+            var scrollHeight = $(window).scrollTop() + $(window).height();
+            if (scrollHeight + 100 >= documentHeight) {
+                for (var i = 0; i < 5; i++) {
+                    $('.infinity').append(i + 1);
+                    $('<h3> 가장 높은 곳에 오르려면 가장 낮은 곳부터 시작하라</h3><hr>').appendTo('.infinity');
+                }
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        for (var i = 0; i < 20; i++) {
+            $('.basic').append(i + 1);
+            $('<h4>험한 언덕을 오르려면 처음에는 서서히 걸어야 한다.</h4><hr>').appendTo('.basic');
+        }
+    });
+</script>
+</body>
+</html>
