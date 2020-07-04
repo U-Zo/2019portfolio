@@ -231,17 +231,15 @@ $(document).ready(function () {
             });
             setTimeout(function () {
                 if (index == 0)
-                    location.href = "wpos.html";
+                    location.href = "pages/jsp_addrbook.html";
                 else if (index == 1)
-                    location.href = "jsp_addrbook.html";
+                    location.href = "pages/mqtt.html";
                 else if (index == 2)
-                    location.href = "mqtt.html";
+                    location.href = "pages/java_chat.html";
                 else if (index == 3)
-                    location.href = "java_chat.html";
+                    location.href = "pages/database.html";
                 else if (index == 4)
-                    location.href = "database.html";
-                else if (index == 5)
-                    location.href = "mobile.html";
+                    location.href = "pages/mobile.html";
             }, 300);
         });
     });
@@ -252,7 +250,7 @@ $(document).ready(function () {
             "transform": "scaleX(1)"
         });
         setTimeout(function () {
-            location.href = "about.html";
+            location.href = "pages/about.html";
         }, 300);
     });
 
@@ -262,7 +260,7 @@ $(document).ready(function () {
             "transform": "scaleX(1)"
         });
         setTimeout(function () {
-            location.href = "about.html";
+            location.href = "pages/about.html";
         }, 300);
     });
 
@@ -393,7 +391,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $(".main-background").eq(that).css("transform", "");
                 if (that == 2)
-                    location.href = "about.html";
+                    location.href = "../about.html";
                 else if (that == 3) {
                     $(".mobile-contact").css({
                         opacity: 1,
