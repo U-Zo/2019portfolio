@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project-MQTT</title>
+    <title>Project-Android</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/woojo.css">
-    <link rel="stylesheet" type="text/css" href="css/woojo_projects.css">
+    <link rel="stylesheet" type="text/css" href="../css/woojo.css">
+    <link rel="stylesheet" type="text/css" href="../css/woojo_projects.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -33,6 +33,42 @@
                 else
                     $("header").addClass("open");
             });
+
+            if ($(document).width() < 415) {
+                $(".mobile-img").css({
+                    width: "50%"
+                });
+                $(".projects-modal-content img").css({
+                    width: "50%"
+                });
+            }
+            else {
+                $(".mobile-img").css({
+                    width: "auto"
+                });
+                $(".projects-modal-content img").css({
+                    width: "auto"
+                });
+            }
+
+            $(window).resize(function () {
+                if ($(document).width() < 415) {
+                    $(".mobile-img").css({
+                        width: "50%"
+                    });
+                    $(".projects-modal-content img").css({
+                        width: "50%"
+                    });
+                }
+                else {
+                    $(".mobile-img").css({
+                        width: "auto"
+                    });
+                    $(".projects-modal-content img").css({
+                        width: "auto"
+                    });
+                }
+            });
         });
     </script>
 </head>
@@ -41,22 +77,22 @@
     <header>
         <div class="header-wrapper">
             <div class="logo" style="--textColor: #97aac7; --slideColor: #b0d0f1">
-                <a style="text-decoration: none; color:inherit" href="index.html">Woojo Kim</a>
+                <a style="text-decoration: none; color:inherit" href="../index.html">Woojo Kim</a>
             </div>
             <nav class="menu">
                 <ul>
                     <li style="--textColor: #a0d7cc; --slideColor: #a0d7cc">
-                        <a style="text-decoration: none; color:inherit" href="index_project.html">Projects</a>
+                        <a style="text-decoration: none; color:inherit" href="../index_project.html">Projects</a>
                     </li>
                     <li style="--textColor: #d7b799; --slideColor: #d7b799">
-                        <a style="text-decoration: none; color:inherit" href="index_about.html">About</a>
+                        <a style="text-decoration: none; color:inherit" href="../index_about.html">About</a>
                     </li>
                 </ul>
             </nav>
             <div class="menu-mobile"></div>
             <nav class="menu-mobile-content">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="../index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="#">PROJECTS</a></li>
                 </ul>
@@ -70,102 +106,12 @@
                     <div class="part">
                         <div class="title-letter">
                             <span>
-                                J
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                S
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                P
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                &nbsp;
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                A
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                D
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                D
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                R
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                E
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                S
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                S
-                            </span>
-                        </div>
-                    </div>
-                    <div class="part">
-                        <div class="line-wrapper">
-                            <span class="line"></span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                B
+                                T
                             </span>
                         </div>
                         <div class="title-letter">
                             <span>
                                 O
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                O
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                K
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                &nbsp;
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                S
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                Y
-                            </span>
-                        </div>
-                        <div class="title-letter">
-                            <span>
-                                S
                             </span>
                         </div>
                         <div class="title-letter">
@@ -175,32 +121,132 @@
                         </div>
                         <div class="title-letter">
                             <span>
-                                E
+                                A
                             </span>
                         </div>
                         <div class="title-letter">
                             <span>
-                                M
+                                L
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                &nbsp;
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                U
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                T
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                I
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                L
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                I
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                T
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                Y
+                            </span>
+                        </div>
+                    </div>
+                    <div class="part">
+                        <div class="line-wrapper">
+                            <span class="line"></span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                A
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                P
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                P
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                L
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                I
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                C
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                A
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                T
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                I
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                O
+                            </span>
+                        </div>
+                        <div class="title-letter">
+                            <span>
+                                N
                             </span>
                         </div>
                     </div>
                 </div>
                 <div class="projects-modal-content">
                     <div class="projects-modal-content-img">
-                        <img src="img/pj/jsp/join.jpg">
+                        <img class="mobile-img" src="../img/pj/mobile/mobile.jpg">
                     </div>
                     <table class="projects-modal-content-table">
                         <tr>
                             <td class="projects-modal-content-title">Purpose</td>
                             <td class="projects-modal-content-content">
                                 <div>
-                                    ● Split DAO and DTO to create jsp web site
+                                    ● Create simple applications
                                 </div>
                                 <div>
-                                    ● Jsp utilization improvement
+                                    ● Creating applications that can use a variety of technologies
                                 </div>
                                 <div>
-                                    ● Connect to the database using jsp
+                                    ● Bring together useful applications
                                 </div>
                             </td>
                         </tr>
@@ -211,13 +257,10 @@
                                     ● Windows 10
                                 </div>
                                 <div>
-                                    ● Tomcat 9
+                                    ● Android Studio
                                 </div>
                                 <div>
-                                    ● MySQL
-                                </div>
-                                <div>
-                                    ● Eclipse
+                                    ● Virtual Device
                                 </div>
                             </td>
                         </tr>
@@ -225,85 +268,98 @@
                             <td class="projects-modal-content-title">Development</td>
                             <td class="projects-modal-content-content">
                                 <div>
-                                    <p>● AddrBean</p>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;- A means of transporting data to database</p>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;- Data are name, telephone number, email and gender</p>
+                                    <p>● Note</p>
+                                    <p>- The notes can be written, saved, loaded, and deleted</p>
                                 </div>
                                 <div>
-                                    <p>● AddrManagerBean</p>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;- Means of accessing the database</p>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;- Perform SQL query</p>
+                                    <p>● Stopwatch</p>
+                                    <p>- Time can be measured</p>
+                                    <p>- Can be initialized with the reset button</p>
+                                </div>
+                                <div>
+                                    <p>● Paint</p>
+                                    <p>- Can draw with hands</p>
+                                    <p>- Can choose the color, type of pen, and thickness</p>
+                                </div>
+                                <div>
+                                    <p>● Calculator</p>
+                                    <p>- The formula can be calculated</p>
+                                </div>
+                                <div>
+                                    <p>● Temperature converter</p>
+                                    <p>- Temperature can be converted into Celsius or Fahrenheit</p>
                                 </div>
                             </td>
                         </tr>
                     </table>
                     <div class="projects-modal-content-img">
-                        <img src="img/pj/jsp/jsp_struc.jpg">
-                        <p>● Web Page cycle structure</p>
+                        <img src="../img/pj/mobile/1.jpg">
+                        <p>● Note UI</p>
+                        <img src="../img/pj/mobile/2.jpg">
+                        <p>● Stopwatch UI</p>
+                        <img src="../img/pj/mobile/3.jpg">
+                        <p>● Paint UI</p>
+                        <img src="../img/pj/mobile/4.jpg">
+                        <p>● Calculator UI</p>
                     </div>
-                    <div class="project-list-wrapper" style="text-align: left;">
-                        <p class="project-p" style="font-size: 50px; color: #666;">PROJECTS</p>
-                        <div class="projects-list">
-                            <div class="projects-list-item">
-                                <div class="projects-list-item-wrapper">
-                                    <img src="img/pj/cap/iot.jpg">
-                                    <a href="mqtt.html">
-                                        <div class="projects-list-cover">
-                                            <p>Based on MQTT</p>
-                                            <p>IoT Home System</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="projects-list-item">
-                                <div class="projects-list-item-wrapper">
-                                    <img src="img/pj/java_chat/chat.jpg">
-                                    <a href="java_chat.html">
-                                        <div class="projects-list-cover">
-                                            <p>Java Chat</p>
-                                            <p>Application</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="projects-list-item">
-                                <div class="projects-list-item-wrapper">
-                                    <img src="img/pj/database/erd.png">
-                                    <a href="database.html">
-                                        <div class="projects-list-cover">
-                                            <p>Management System</p>
-                                            <p>For Music Streaming</p>
-                                        </div>
-                                    </a>
-                                </div>
+                </div>
+                <div class="project-list-wrapper" style="text-align: left;">
+                    <p class="project-p" style="font-size: 50px; color: #666;">PROJECTS</p>
+                    <div class="projects-list">
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <img src="../img/pj/jsp/join.jpg">
+                                <a href="jsp_addrbook.html">
+                                    <div class="projects-list-cover">
+                                        <p>JSP Address</p>
+                                        <p>Book System</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                        <div class="projects-list">
-                            <div class="projects-list-item">
-                                <div class="projects-list-item-wrapper">
-                                    <img src="img/pj/mobile/mobile.jpg">
-                                    <a href="mobile.html">
-                                        <div class="projects-list-cover">
-                                            <p>Total Utility</p>
-                                            <p>Application</p>
-                                        </div>
-                                    </a>
-                                </div>
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <img src="../img/pj/cap/iot.jpg">
+                                <a href="mqtt.html">
+                                    <div class="projects-list-cover">
+                                        <p>Based on MQTT</p>
+                                        <p>IoT Home System</p>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="projects-list-item">
-                                <div class="projects-list-item-wrapper">
-                                    <img src="img/pj/wpos/login.jpg">
-                                    <a href="wpos.html">
-                                        <div class="projects-list-cover">
-                                            <p>WPoS</p>
-                                        </div>
-                                    </a>
-                                </div>
+                        </div>
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <img src="../img/pj/java_chat/chat.jpg">
+                                <a href="java_chat.html">
+                                    <div class="projects-list-cover">
+                                        <p>Java Chat</p>
+                                        <p>Application</p>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="projects-list-item">
-                                <div class="projects-list-item-wrapper">
-                                    <div class="projects-list-cover"></div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="projects-list">
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <img src="../img/pj/database/erd.png">
+                                <a href="database.html">
+                                    <div class="projects-list-cover">
+                                        <p>Management System</p>
+                                        <p>For Music Streaming</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <div class="projects-list-cover"></div>
+                            </div>
+                        </div>
+                        <div class="projects-list-item">
+                            <div class="projects-list-item-wrapper">
+                                <div class="projects-list-cover"></div>
                             </div>
                         </div>
                     </div>
